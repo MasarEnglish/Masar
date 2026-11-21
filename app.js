@@ -332,7 +332,7 @@ document.addEventListener("click",function(e){var t=e.target;if(t&&t.id==="obl")
 document.addEventListener("click",function(e){var p=e.target.closest&&e.target.closest(".pn");if(p&&!e.target.closest(".circ")){var c=p.querySelector(".circ");if(c)c.click()}});
 function langFoot(){var f=document.querySelector("footer.ft");if(!f||document.getElementById("dlb"))return;var d=document.createElement("div");d.className="ft-l";d.innerHTML=DL.btn();f.parentNode.insertBefore(d,f);DL.wire()}
 applyTh();langFoot();(function(){var xs=$("xps");if(xs)xs.remove();var L=O=document.body.getAttribute("data-l")||null;if(O&&(!S.ob||!canOpen(O))){view();$("app").innerHTML='<div class="card" style="text-align:center"><p>'+D("lesson_locked")+'</p><a class="btn" href="index.html">خريطة الدروس 🗺️</a></div>'+(function(){var q=find(L);return q&&(q.k==="v"||q.k==="w")?xpl(L):""})();}else view();initAds()})();
-function initAds(){var C=(window.CFG||{}).ads||{},cl=C.client||"ca-pub-6780159293669545",xp=$("xp"),st=O&&find(O),ok=!!(xp&&st&&(st.k==="v"||st.k==="w")),mp=null,live=ok;
+function initAds(){var C=(window.CFG||{}).ads||{},cl=C.client||"ca-pub-6780159293669545",xp=$("xp"),st=O&&find(O),ok=!!(window.CFG&&CFG.ads&&CFG.ads.lessons&&xp&&st&&(st.k==="v"||st.k==="w")),mp=null,live=ok;
 if(ok&&!$("adm")){var m=document.createElement("div");m.className="ad";m.id="adm";
  if(xp){var h=xp.querySelectorAll("h3")[1];if(h)h.parentNode.insertBefore(m,h);else xp.appendChild(m)}
  else{var us=document.querySelectorAll("#app .unit"),t=us[Math.floor(us.length/2)];if(t)t.parentNode.insertBefore(m,t)}}
